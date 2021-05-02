@@ -17,6 +17,10 @@ socket.on("connect", () => {
   }
 });
 
+socket.on("bad credentials", () => {
+  alert("Bad credentials, clear cookies and try again.");
+});
+
 socket.on("connect_error", (err) => {
   console.log(`connect_error due to ${err.message}`);
 });

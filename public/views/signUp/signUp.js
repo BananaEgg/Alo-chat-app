@@ -4,9 +4,6 @@ import { SingUpForm } from "./components.js";
 
 const SignUp = (socket) => {
   SingUpForm();
-  socket.on("bad credentials", () => {
-    alert("Bad credentials, clear cookies and try again.");
-  });
 
   socket.on("name approval", (res) => {
     if (res) {
