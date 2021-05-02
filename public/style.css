@@ -1,0 +1,275 @@
+/* <a target="_blank" href="undefined/icons/set/filled-sent">Email Send icon</a> icon by <a target="_blank" href="">Icons8</a> */
+body,
+html {
+  font-family: "Helvetica", "Arial", sans-serif;
+  overflow: hidden;
+}
+
+/* --------------------------Sign up------------------------------------ */
+.greenButton:hover {
+  background-color: #45a049;
+}
+
+.greenButton {
+  font-size: 25px;
+  background-color: hsl(122, 39%, 49%);
+  color: white;
+  padding: 15px;
+  margin: 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#signIn {
+  z-index: 2;
+  font-size: 25px;
+  text-align: center;
+  background-color: rgba(234, 240, 237);
+  color: rgb(41, 40, 40);
+  border-radius: 5px;
+  min-height: 200px;
+  min-width: 400px;
+  padding: 10px 50px 50px 50px;
+  vertical-align: middle;
+}
+
+#signIn input[type="text"],
+select {
+  width: 250px;
+  font-size: 20px;
+  padding: 15px;
+  margin: 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.cardTitle {
+  font-size: 50px;
+  margin-bottom: 0;
+}
+
+.cardSubtitle {
+  margin: 0 0 30px 0;
+}
+
+#overLay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow-x: hidden;
+}
+
+/* ------------------chat style--------------------- */
+
+#mainSpace {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+/*-------- Sidebar Style------- */
+#sideBarHeader {
+  background: rgb(240, 239, 239);
+  border-right: 1px solid rgba(95, 95, 95, 0.164);
+}
+
+#sideBar {
+  height: 100%;
+  width: 400px;
+  min-width: 250px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+  float: left;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  overflow: hidden;
+  display: block;
+}
+
+#usersContainer {
+  height: 90%;
+  overflow: scroll;
+}
+
+#usersContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.online {
+  color: #45a049;
+  display: inline-table;
+  float: right;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.offline {
+  color: red;
+  display: inline;
+  float: right;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.userDivider {
+  border-bottom: 1px solid rgba(95, 95, 95, 0.164);
+}
+
+.userName {
+  display: inline-block;
+  vertical-align: top;
+  padding: 11px 11px 11px 0;
+  font-size: 15px;
+}
+
+.avatar {
+  height: 50px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+/*----------- Chat view style---------- */
+#chatView {
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.671);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.671);
+  height: 100vh;
+  min-width: 200px;
+  left: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#messageTreadContainer {
+  background-image: url("./images/whatsappBackground.png");
+  height: 100%;
+  min-width: 800px;
+  max-width: 900px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin: auto;
+}
+
+#messageTread {
+  margin: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 100%;
+  width: 85%;
+  margin-bottom: 8px;
+}
+
+#messageTread::-webkit-scrollbar {
+  display: none;
+}
+
+.messageContainer {
+  margin: 10px;
+  min-width: 90px;
+}
+
+.textMessage {
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+  display: block;
+  clear: both;
+  word-wrap: break-word;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 1px;
+  min-width: 50px;
+}
+
+.messageText {
+  float: left;
+  clear: both;
+  margin: 0 !important;
+  padding: 0;
+  overflow: hidden;
+  white-space: pre-wrap;
+}
+
+.messageTime {
+  font-size: 12px;
+  margin: 0 0 3px 0;
+  float: right;
+  clear: both;
+}
+
+.receivedMessage {
+  background-color: rgb(255, 255, 255);
+  float: left;
+  clear: both;
+}
+
+.sentMessage {
+  background-color: #dcf8c6;
+  float: right;
+  clear: both;
+}
+
+.messageAuthorName {
+  margin: 0;
+  font-size: 12px;
+}
+
+/* ----------Chat input ----------- */
+
+#chatTitleBar {
+  display: inline;
+  background: rgb(240, 239, 239);
+}
+
+#sendButton {
+  border: none;
+}
+
+#sendButtonIcon {
+  height: 30px;
+  padding-bottom: 3px;
+}
+
+#chatFooter {
+  padding: 10px;
+  bottom: 0;
+  background: rgb(240, 239, 239);
+}
+
+#inputContainer {
+  width: 87%;
+  margin: auto;
+  padding-bottom: 10px;
+  padding-left: 25px;
+}
+
+#messageInputForm {
+  display: inline;
+}
+
+#chatView textarea {
+  width: 90%;
+  font-size: 15px;
+  padding: 10px;
+  margin: 0;
+  display: inline-block;
+  border: 1px solid rgba(204, 204, 204, 0);
+  border-radius: 30px;
+  box-sizing: border-box;
+  overflow: hidden;
+  resize: none;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+#chatView textarea:focus,
+input:focus {
+  outline: none;
+}
