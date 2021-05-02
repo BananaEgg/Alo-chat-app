@@ -1,8 +1,4 @@
-import {
-  addElementHtml,
-  removeElementHtml,
-  getRandomColor,
-} from "/utils.js";
+import { addElementHtml, removeElementHtml, getRandomColor } from "/utils.js";
 import { ChatFooter } from "./html.js";
 import { Message, Chat, SideBar, ChatWindow, NewChat } from "./components.js";
 
@@ -44,12 +40,14 @@ const ChatView = (socket) => {
 
   socket.on("user offline", (user) => {
     removeElementHtml(user.userID);
-    Chat(user);
+    if (user) {
+      Chat(user);
+    }
   });
 
   socket.on("user online", (user) => {
     removeElementHtml(user.userID);
-    Chat(user);
+    NewChat(user);
   });
 
   const checkSubmit = (e) => {
