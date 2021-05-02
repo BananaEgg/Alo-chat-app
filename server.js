@@ -11,8 +11,8 @@ app.get("/", (req, res) => {
   res.sendFile("/index.html");
 });
 
-http.listen(config.port, () => {
-  console.log("listening on " + config.port);
+http.listen(process.env.PORT || 5000, () => {
+  console.log("Server started :-) ");
 });
 
 //TODO add to utils file -------
