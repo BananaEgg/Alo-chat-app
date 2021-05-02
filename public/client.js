@@ -1,7 +1,8 @@
-import  {ChatView}  from "./views/chat/chat.js";
-import {SignUp} from "./views/signUp/signUp.js"
+import { ChatView } from "./views/chat/chat.js";
+import { SignUp } from "./views/signUp/signUp.js";
+var HOST = location.origin.replace(/^http/, "ws");
 
-const socket = io("ws://localhost:3000", {
+const socket = io(HOST, {
   reconnectionDelayMax: 1000,
 });
 
