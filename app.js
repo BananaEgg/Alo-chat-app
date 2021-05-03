@@ -70,11 +70,11 @@ services.setUpServer().then((users) => {
 
     socket.on("disconnect", function () {
       try {
-        let user = services.userBySocketId(socket.id);
+        let user = services.userBySocketId(socket.id, users);
         user.online = false;
         services.updateUsers(users);
-        delete sockets[socket.id];
         io.to("public chat").emit("user offline", user);
+        delete sockets[socket.id];
       } catch (err) {
         console.error(err, "Error while user disconnected");
       }
