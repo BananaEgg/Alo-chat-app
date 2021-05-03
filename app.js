@@ -15,7 +15,7 @@ http.listen(process.env.PORT || 5000, () => {
 
 services.setUpServer().then((users) => {
   var sockets = {};
-  var chats = { "public chat": { name: "Public chat", participants: [] } };
+  var chats = { "public chat": { name: "Public chat", participants: {} } };
   const publicChatId = "public chat";
   services.createRoom(users, publicChatId, sockets);
 
@@ -66,8 +66,6 @@ services.setUpServer().then((users) => {
       } else {
         sockets[message.chat].emit(services.userBySocketId(socket.id), message);
       }
-
-      //TODO add single user message
     });
 
     socket.on("disconnect", function () {

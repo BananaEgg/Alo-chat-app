@@ -3,22 +3,21 @@ import { ChatFooter } from "./html.js";
 import { Message, Chat, SideBar, ChatWindow, NewChat } from "./components.js";
 
 //TODO change margin for a replying message
-const ChatView = (socket) => {
+const ChatView = (socket, currentUser) => {
   var allUsers = {};
   var currentChat = { chat: "public chat", group: true };
   ChatWindow(currentChat);
-  SideBar();
+  SideBar(currentUser);
   addElementHtml("messageTreadContainer", "div", "chatFooter", ChatFooter);
 
   socket.on("income message", (msg) => {
-    const signedInUser = JSON.parse(localStorage.getItem("aloChatUser"));
-    if (msg.author.userID === signedInUser.userID) {
+    if (msg.author.userID === currentUser.userID) {
       msg.sentByUser = true;
-      Message(msg);
+      Message(msg,currentUser);
     } else {
       msg.author.color = allUsers[msg.author.userID].color;
       msg.sentByUser = false;
-      Message(msg);
+      Message(msg,currentUser);
     }
     let messageThread = document.getElementById("messageTread");
     messageThread.scrollTop = messageThread.scrollHeight;

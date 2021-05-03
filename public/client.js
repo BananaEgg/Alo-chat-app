@@ -26,5 +26,7 @@ socket.on("connect_error", (err) => {
 });
 
 socket.on("successfully signedIn", () => {
-  ChatView(socket);
+  let user = localStorage.getItem("aloChatUser");
+  user = JSON.parse(user);
+  ChatView(socket, user);
 });

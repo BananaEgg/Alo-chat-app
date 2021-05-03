@@ -8,17 +8,16 @@ const excludeOne = (property, object) => {
 
 const createGroup = (users, roomName) => {
   const roomId = uuid();
-  chats[roomId].participants = [];
+  chats[roomId].participants = {};
   for (const user in Users) {
-    chats[roomId].participants.push(users[user]);
+    chats[roomId].participants[users[user].userID] = users[user];
   }
 
   return roomId;
 };
 
 const addUserToGroup = (user, roomId, chats, sockets) => {
-  chats[roomId].participants.push(user);
-  //TODO prevent user duplication
+  chats[roomId].participants[user.userID] = user;
   sockets[user.userID].join(roomId);
 };
 

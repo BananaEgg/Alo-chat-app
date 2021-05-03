@@ -10,13 +10,11 @@ const SignUp = (socket) => {
       removeElementHtml("signIn");
       removeElementHtml("overLay");
       localStorage.setItem("aloChatUser", JSON.stringify(res));
-      ChatView(socket);
+      ChatView(socket, res);
     } else {
       alert("Name already taken, please choose another name.");
     }
   });
-
-  //----------------------------- General functions -----------------------------
 
   const sendName = (event) => {
     event.preventDefault();

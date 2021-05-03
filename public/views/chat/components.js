@@ -51,9 +51,8 @@ const NewChat = (chat) => {
   addFirstChild("usersContainer", "span", chat.userID, html);
 };
 
-const SideBar = () => {
-  const user = JSON.parse(localStorage.getItem("aloChatUser"));
-  const html = `<div id="sideBarHeader"> <img id="userProfilePic"  class="avatar" src="./images/minyonAvatar.jpg"><p class="userName" >${user.name}</P></div>
+const SideBar = (currentUser) => {
+  const html = `<div id="sideBarHeader"> <img id="userProfilePic"  class="avatar" src="./images/minyonAvatar.jpg"><p class="userName" >${currentUser.name}</P></div>
   <div id="usersContainer"></div> 
   `;
   addFirstChild("chatView", "div", "sideBar", html);
