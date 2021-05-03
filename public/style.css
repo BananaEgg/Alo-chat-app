@@ -1,4 +1,7 @@
 /* <a target="_blank" href="undefined/icons/set/filled-sent">Email Send icon</a> icon by <a target="_blank" href="">Icons8</a> */
+/* <span style='font-size:100px;'>&#129409;</span> */
+
+
 body,
 html {
   font-family: "Helvetica", "Arial", sans-serif;
@@ -187,7 +190,7 @@ select {
   border-radius: 5px;
   padding: 5px;
   margin: 1px;
-  min-width: 50px;
+  min-width: 70px;
 }
 
 .messageText {

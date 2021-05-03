@@ -1,10 +1,10 @@
-function addElementHtml(
+const addElementHtml = (
   parentId,
   elementTag,
   elementId,
   html,
   styleClass = ""
-) {
+) => {
   let element = document.getElementById(elementId);
   if (!element) {
     let p = document.getElementById(parentId);
@@ -18,16 +18,20 @@ function addElementHtml(
   } else {
     element.innerHTML = html;
   }
-}
+};
 
-function removeElementHtml(elementId) {
+const removeElementHtml = (elementId) => {
   try {
     let element = document.getElementById(elementId);
     element.parentNode.removeChild(element);
   } catch (err) {
     console.log(err);
   }
-}
+};
+
+const clearElementHtml = (elementId) => {
+  document.getElementById(elementId).innerHTML = "";
+};
 
 const addFirstChild = (parentId, elementTag, childId, childHtml) => {
   let newElement = document.createElement(elementTag);
@@ -46,4 +50,4 @@ const getRandomColor = () => {
   return color;
 };
 
-export { addElementHtml, removeElementHtml, addFirstChild, getRandomColor };
+export { addElementHtml, removeElementHtml, addFirstChild, getRandomColor, clearElementHtml };

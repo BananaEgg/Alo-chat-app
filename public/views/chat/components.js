@@ -1,4 +1,4 @@
-import { addElementHtml, addFirstChild } from "/utils.js";
+import { addElementHtml, addFirstChild, clearElementHtml } from "/utils.js";
 
 const Message = (message) => {
   const time = message.time;
@@ -17,6 +17,7 @@ const Message = (message) => {
 
 const ChatWindow = (chat) => {
   const html = `<div id="messageTreadContainer"><div id="chatTitleBar"> <img  class="avatar" src="./images/groupAvatar.png"> <p class="userName"> ${chat.chat}</P> </div>  <div id="messageTread"></div></div>`;
+  clearElementHtml("mainSpace");
   addElementHtml("mainSpace", "div", "chatView", html);
 };
 
