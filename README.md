@@ -19,4 +19,4 @@ npm start
 Then open your browser at (localhost:5000)
 
 ## Find working example
-open (https://alowannachat.herokuapp.com/) to see the chat 
+open (https://alowannachat.herokuapp.com) to see the chat 
